@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model InstalacionModel;
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card col-8">
+    <div class="card-header">
+        <h1>Editar Instalacion</h1>
+    </div>
+<div class="card-body justify-content-center">
+<form asp-action="Editar" asp-controller="Instalacion" method="post">
+    <input asp-for="idaula" type="hidden" class="form-control"/>
+    <div class="col-md-4 mb-3">
+    <label for="aula">Capacidad del aula</label>
+    <input type="text" asp-for="capacidad" class="form-control" />
+    </div>
+    <div>
+    <label for="aula">Nombre del aula</label>
+    <input type="text" asp-for="nombre"  class="form-control"/>
+    <span asp-validation-for="nombre" class="text-danger"></span>
+    </div>
+    <div>
+    <label for="aula">Numero del edificio</label>
+    <input type="text" asp-for="numedificio1" class="form-control" />
+    </div>
+    <div class="col-md-4 mb-3">
+    <button type="submit" class="btn btn-primary mb-3 btn-sm">Guardar</button> <br />
+    <a asp-action="Listar" asp-controller="Instalacion" class="btn btn-warning btn-sm"> Volver a la lista</a>
+    </div>
+</form>
+</div>
+</div>

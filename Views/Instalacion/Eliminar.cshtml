@@ -1,0 +1,23 @@
+﻿@model InstalacionModel;
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card col-8">
+    <div class="card-header">
+        <h1>Eliminar Instalacion</h1>
+    </div>
+    <div class="card-body justify-content-center">
+        <form asp-action="Eliminar" asp-controller="Instalacion" method="post">
+            <input asp-for="idaula" type="hidden" class="form-control"/>
+            <div class="alert alert-danger" role="alert">
+                ¿Desea Eliminar esta instalacion: @Html.DisplayTextFor(m=>m.nombre)?
+            </div>
+            <div class="col-md-4 -mb-3">
+                <button type="submit" class="btn btn-danger mb-3 btn-sm">Eliminar</button> <br />
+                <a asp-action="Listar" asp-controller="Instalacion" class="btn btn-warning btn-sm">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>

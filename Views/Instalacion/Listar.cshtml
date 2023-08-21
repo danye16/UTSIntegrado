@@ -1,0 +1,41 @@
+﻿@model List<InstalacionModel>;
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card cool-8">
+    <div class="card-header">
+        <h1>Lista de Instalaciones</h1>
+    </div>
+    <div class="card-body">
+        <a asp-action="Insertar" asp-controller="Instalacion" class="btn btn-primary btn-sm">Agregar Nueva Instalacion</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>IdAula</th>
+                    <th>Capacidad</th>
+                    <th>Nombre</th>
+                    <th>Numero de Edificio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem=>item.idaula)</td>
+                        <td>@Html.DisplayFor(modelItem=>item.capacidad)</td>
+                        <td>@Html.DisplayFor(modelItem=>item.nombre)</td>
+                        <td>@Html.DisplayFor(modelItem=>item.numedificio1)</td>
+                        <td>
+                            <a asp-action="Editar" asp-controller="Instalacion" asp-route-idaula="@item.idaula" class="btn btn-warning btn-sm"> Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Instalacion" asp-route-idaula="@item.idaula" class="btn btn-danger btn-sm"> Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-action="index">UTS</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>
+    </div>
+</nav>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4"></div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+            <h2>Recordar contrase&ntildea</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="user" required placeholder="Ingrese su usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Ingrese una nueva contrase&ntildea</label>
+                    <input type="password" class="form-control" id="password" required placeholder="Nueva contraseña">
+                    <a href=""></a>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Confirme su contrase&ntildea</label>
+                    <input type="password" class="form-control" id="password" required placeholder="Confirme contraseña">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success" formaction="index">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/index.js"></script>

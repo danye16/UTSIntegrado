@@ -1,0 +1,25 @@
+﻿@model horario_agendaModel;
+@{
+    ViewData["Title"] = "Insertar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Insertar</h1>
+
+<form asp-action="Insertar" asp-controller="Horarios" method="post">
+   <label>Identificador del aula</label>
+    <input type="text" asp-for="idaula2" />
+   <label>Apartado</label>
+    <input type="text" asp-for="apartado" />
+   <label>Dia</label>
+    <input type="text" asp-for="dia"/>
+   <label>Mes</label>
+    <input type="text" asp-for="mes"/>
+   <label>Hora</label>
+    <input type="text" asp-for="hora"/>
+   <label>Years</label>
+    <input type="text" asp-for="years"/>
+    <button type="submit">Enviar</button>
+
+    
+</form>
