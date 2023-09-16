@@ -57,3 +57,5 @@ app.MapControllerRoute(
     pattern: "{controller=LoginUSuario}/{action=Registro}/{id?}");
 
 app.Run();
+
+//Prueba desde el visual studio
